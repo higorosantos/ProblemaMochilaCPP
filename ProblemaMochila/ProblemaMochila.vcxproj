@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Binario.cpp" />
     <ClCompile Include="ProblemaMochila.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Binario.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
