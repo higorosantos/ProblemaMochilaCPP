@@ -4,7 +4,7 @@
 #include <iostream>
 #include <clocale>
 #include <windows.h>
-#include "Binario.h"
+#include "Genetico.h"
 
 using namespace std;
 
@@ -41,7 +41,7 @@ int main()
     }
     */
 
-    unsigned short result = testarBit(6200,15);
+    unsigned short result = mutacaoSimples(1259);
 
     cout << result;
 

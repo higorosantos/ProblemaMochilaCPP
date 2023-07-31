@@ -15,11 +15,25 @@ unsigned short desligarBit(unsigned short valor, int posicao)
 	return andBinario(valor, mascara);
 }
 
+unsigned short inverterBit(unsigned short valor, int posicao) {
+
+	unsigned short mascara = (1 << posicao);
+
+	return xorBinario(valor, mascara);
+
+}
+
 bool testarBit(unsigned short valor, int posicao)
 {	
 	unsigned short mascara = (1 << posicao);
 
 	return andBinario(valor,mascara);
+}
+
+unsigned short xorBinario(unsigned short valor1, unsigned short valor2) {
+
+	return (unsigned short)valor1 ^ valor2;
+
 }
 
 unsigned short andBinario(unsigned short valor, unsigned short valor2)
