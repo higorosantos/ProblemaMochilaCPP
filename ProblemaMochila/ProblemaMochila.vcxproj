@@ -134,6 +134,7 @@
   <ItemGroup>
     <ClInclude Include="Binario.h" />
     <ClInclude Include="Genetico.h" />
+    <ClInclude Include="Utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
