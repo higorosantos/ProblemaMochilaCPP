@@ -4,6 +4,7 @@
 #include <iostream>
 #include <windows.h>
 #include "Genetico.h"
+#include "Utils.h";
 
 
 void imprimirAvaliacao(unsigned short amostra);
@@ -21,7 +22,7 @@ int main()
 
     cout << "Entre com 6 soluçoes iniciais (numeros entre 0 e 65535): " << endl;
 
-    /*for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < 6; i++) {
 
         int num = 0;
 
@@ -30,16 +31,16 @@ int main()
 
         while (num < 0 || num > 65535) {
 
-            cout << "";
+            cout << red << "Valor Invalido, o valor deve estar entre 0 e 65535!\n" << defaul;
             cout << "Digite o " << (i + 1) << " valor: ";
             cin >> num;
 
         }
 
-        entrada[i] = num;
+        entradas[i] = num;
 
 
-    }*/
+    }
 
     system("cls");
     cout << "Resultado da Avalicação\n";
@@ -72,7 +73,7 @@ void criarAmostras(unsigned short entradas[]) {
 
 void imprimirAvaliacao(unsigned short amostra)
 {   
-
+   
 
     Mochila result = avaliacao(amostra);
     
@@ -81,8 +82,16 @@ void imprimirAvaliacao(unsigned short amostra)
     cout << "$" << result.valorTotal;
     cout << " - ";
     cout.width(3); cout << result.pesoTotal << "Kg";
-    cout << " - ";
-    cout << (result.limiteUltrapassado ? "X" : "OK") << endl;
+    cout << " - "; 
+    if (result.limiteUltrapassado) {
+
+        cout << red << "X" << defaul << endl;
+
+    }
+    else {
+
+        cout << green << "OK" << defaul << endl;
+    }
 
 
 }

@@ -130,6 +130,7 @@
     <ClCompile Include="Binario.cpp" />
     <ClCompile Include="Genetico.cpp" />
     <ClCompile Include="ProblemaMochila.cpp" />
+    <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Binario.h" />
